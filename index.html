@@ -73,7 +73,7 @@
         }
         var map = L.map('map', {
             zoomControl:true, maxZoom:28, minZoom:1
-        }).fitBounds([[3.1222518403269452,101.6512542838207],[3.1245888286287395,101.65479998330889]]);
+        }).fitBounds([[3.1220053091212736,101.64981352024091],[3.1266792857201944,101.65690492647484]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -901,7 +901,7 @@
                 stroke: false,
                 fillOpacity: 1,
                 fillPattern: pattern_Earliestbuilding_12_0,
-                interactive: true,
+                interactive: false,
             }
         }
         function style_Earliestbuilding_12_1() {
@@ -914,7 +914,7 @@
                 lineJoin: 'bevel',
                 weight: 2.0,
                 fillOpacity: 0,
-                interactive: true,
+                interactive: false,
             }
         }
         map.createPane('pane_Earliestbuilding_12');
@@ -922,7 +922,7 @@
         map.getPane('pane_Earliestbuilding_12').style['mix-blend-mode'] = 'normal';
         var layer_Earliestbuilding_12 = new L.geoJson.multiStyle(json_Earliestbuilding_12, {
             attribution: '',
-            interactive: true,
+            interactive: false,
             dataVar: 'json_Earliestbuilding_12',
             layerName: 'layer_Earliestbuilding_12',
             pane: 'pane_Earliestbuilding_12',
@@ -1508,84 +1508,6 @@
         var baseMaps = {};
         L.control.layers(baseMaps,{'<img src="legend/Label_20.png" /> Label': layer_Label_20,'<img src="legend/POI_19.png" /> POI': layer_POI_19,'<img src="legend/StudyArea_18.png" /> Study Area': layer_StudyArea_18,'<img src="legend/Surau_17.png" /> Surau': layer_Surau_17,'<img src="legend/WaterDispenser_16.png" /> Water Dispenser': layer_WaterDispenser_16,'<img src="legend/VendingMachine_15.png" /> Vending Machine': layer_VendingMachine_15,'<img src="legend/ParkingLot_14.png" /> Parking Lot': layer_ParkingLot_14,'<img src="legend/Walkway_13.png" /> Walkway': layer_Walkway_13,'<img src="legend/Earliestbuilding_12.png" /> Earliest building': layer_Earliestbuilding_12,'<img src="legend/PhysicsZone_11.png" /> Physics Zone': layer_PhysicsZone_11,'<img src="legend/GeologyZone_10.png" /> Geology Zone': layer_GeologyZone_10,'<img src="legend/ChemistryZone_9.png" /> Chemistry Zone': layer_ChemistryZone_9,'<img src="legend/MathematicsZone_8.png" /> Mathematics Zone': layer_MathematicsZone_8,'<img src="legend/BiologyZone_7.png" /> Biology Zone': layer_BiologyZone_7,'<img src="legend/CommonZone_6.png" /> Common Zone': layer_CommonZone_6,'<img src="legend/BusStop_5.png" /> Bus Stop': layer_BusStop_5,'<img src="legend/River_4.png" /> River': layer_River_4,'Road Network<br /><table><tr><td style="text-align: center;"><img src="legend/RoadNetwork_3_Road0.png" /></td><td>Road</td></tr><tr><td style="text-align: center;"><img src="legend/RoadNetwork_3_Road1.png" /></td><td>Road</td></tr><tr><td style="text-align: center;"><img src="legend/RoadNetwork_3_Road2.png" /></td><td>Road</td></tr><tr><td style="text-align: center;"><img src="legend/RoadNetwork_3_Road3.png" /></td><td>Road</td></tr><tr><td style="text-align: center;"><img src="legend/RoadNetwork_3_ServiceRoad4.png" /></td><td>Service Road</td></tr><tr><td style="text-align: center;"><img src="legend/RoadNetwork_3_PrimaryRoad5.png" /></td><td>Primary Road</td></tr><tr><td style="text-align: center;"><img src="legend/RoadNetwork_3_PrimaryLink6.png" /></td><td>Primary_Link</td></tr><tr><td style="text-align: center;"><img src="legend/RoadNetwork_3_SecondaryRoad7.png" /></td><td>Secondary Road</td></tr><tr><td style="text-align: center;"><img src="legend/RoadNetwork_3_SecondaryLink8.png" /></td><td>Secondary Link</td></tr><tr><td style="text-align: center;"><img src="legend/RoadNetwork_3_TrunkRoad9.png" /></td><td>Trunk Road</td></tr><tr><td style="text-align: center;"><img src="legend/RoadNetwork_3_TrunkLink10.png" /></td><td>Trunk Link</td></tr><tr><td style="text-align: center;"><img src="legend/RoadNetwork_3_MotorwayLink11.png" /></td><td>Motorway Link</td></tr><tr><td style="text-align: center;"><img src="legend/RoadNetwork_3_Expressway12.png" /></td><td>Expressway</td></tr></table>': layer_RoadNetwork_3,"Contour Line": layer_ContourLine_2,'<img src="legend/FacultyofScience_1.png" /> Faculty of Science': layer_FacultyofScience_1,"Google Satellite": layer_GoogleSatellite_0,}).addTo(map);
         setBounds();
-        var i = 0;
-        layer_CommonZone_6.eachLayer(function(layer) {
-            var context = {
-                feature: layer.feature,
-                variables: {}
-            };
-            layer.bindTooltip((layer.feature.properties['name'] !== null?String('<div style="color: #323232; font-size: 6pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['name']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_CommonZone_6'});
-            labels.push(layer);
-            totalMarkers += 1;
-              layer.added = true;
-              addLabel(layer, i);
-              i++;
-        });
-        var i = 0;
-        layer_BiologyZone_7.eachLayer(function(layer) {
-            var context = {
-                feature: layer.feature,
-                variables: {}
-            };
-            layer.bindTooltip((layer.feature.properties['name'] !== null?String('<div style="color: #323232; font-size: 6pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['name']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_BiologyZone_7'});
-            labels.push(layer);
-            totalMarkers += 1;
-              layer.added = true;
-              addLabel(layer, i);
-              i++;
-        });
-        var i = 0;
-        layer_MathematicsZone_8.eachLayer(function(layer) {
-            var context = {
-                feature: layer.feature,
-                variables: {}
-            };
-            layer.bindTooltip((layer.feature.properties['name'] !== null?String('<div style="color: #323232; font-size: 6pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['name']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_MathematicsZone_8'});
-            labels.push(layer);
-            totalMarkers += 1;
-              layer.added = true;
-              addLabel(layer, i);
-              i++;
-        });
-        var i = 0;
-        layer_ChemistryZone_9.eachLayer(function(layer) {
-            var context = {
-                feature: layer.feature,
-                variables: {}
-            };
-            layer.bindTooltip((layer.feature.properties['name'] !== null?String('<div style="color: #323232; font-size: 6pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['name']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_ChemistryZone_9'});
-            labels.push(layer);
-            totalMarkers += 1;
-              layer.added = true;
-              addLabel(layer, i);
-              i++;
-        });
-        var i = 0;
-        layer_GeologyZone_10.eachLayer(function(layer) {
-            var context = {
-                feature: layer.feature,
-                variables: {}
-            };
-            layer.bindTooltip((layer.feature.properties['name'] !== null?String('<div style="color: #323232; font-size: 6pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['name']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_GeologyZone_10'});
-            labels.push(layer);
-            totalMarkers += 1;
-              layer.added = true;
-              addLabel(layer, i);
-              i++;
-        });
-        var i = 0;
-        layer_PhysicsZone_11.eachLayer(function(layer) {
-            var context = {
-                feature: layer.feature,
-                variables: {}
-            };
-            layer.bindTooltip((layer.feature.properties['name'] !== null?String('<div style="color: #323232; font-size: 6pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['name']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_PhysicsZone_11'});
-            labels.push(layer);
-            totalMarkers += 1;
-              layer.added = true;
-              addLabel(layer, i);
-              i++;
-        });
         var i = 0;
         layer_Label_20.eachLayer(function(layer) {
             var context = {
